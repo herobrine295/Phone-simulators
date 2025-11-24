@@ -1,0 +1,63 @@
+/* General body and phone setup */
+body {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#phone {
+    width: 320px;
+    height: 570px;
+    background: #000;
+    border-radius: 30px;
+    border: 5px solid #333;
+    box-shadow: 0 0 20px #000;
+    overflow: hidden;
+}
+
+#screen {
+    background: white;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Home screen and app buttons */
+.apps button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.app h2 {
+    margin-top: 0;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button.back {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Simple hover effect for apps */
+button:hover {
+    background-color: #eee;
+}
