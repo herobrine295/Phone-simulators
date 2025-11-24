@@ -1,0 +1,32 @@
+// Function to open an app
+function openApp(appName) {
+    document.querySelectorAll('.app').forEach(app => app.classList.add('hidden'));
+    document.getElementById('home-screen').classList.add('hidden');
+    document.getElementById(appName).classList.remove('hidden');
+}
+
+// Go back to home screen
+function goHome() {
+    document.querySelectorAll('.app').forEach(app => app.classList.add('hidden'));
+    document.getElementById('home-screen').classList.remove('hidden');
+}
+
+// Safari app: visit a website
+function visitWebsite() {
+    const url = document.getElementById('urlInput').value;
+    if (!url) {
+        document.getElementById('websiteMessage').innerText = "Please enter a URL!";
+        return;
+    }
+    document.getElementById('websiteMessage').innerText = `Pretending to visit: ${url}`;
+}
+
+// Camera app: take a photo
+function takePhoto() {
+    document.getElementById('cameraMessage').innerText = "📸 Photo taken! (simulated)";
+}
+
+// App Store: install a new app
+function installApp(appName) {
+    document.getElementById('storeMessage').innerText = `${appName} installed! 🎉`;
+}
