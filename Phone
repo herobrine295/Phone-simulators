@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Phone Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="phone">
+        <div id="screen">
+
+            <!-- Home Screen -->
+            <div id="home-screen">
+                <h2>📱 My Phone</h2>
+                <div class="apps">
+                    <button onclick="openApp('youtube')">YouTube</button>
+                    <button onclick="openApp('fortnite')">Fortnite</button>
+                    <button onclick="openApp('safari')">Safari</button>
+                    <button onclick="openApp('camera')">Camera</button>
+                    <button onclick="openApp('appstore')">App Store</button>
+                </div>
+            </div>
+
+            <!-- YouTube App -->
+            <div id="youtube" class="app hidden">
+                <h2>📺 YouTube</h2>
+                <p>Watch your favorite videos here!</p>
+                <button class="back" onclick="goHome()">⬅ Home</button>
+            </div>
+
+            <!-- Fortnite App -->
+            <div id="fortnite" class="app hidden">
+                <h2>🎮 Fortnite</h2>
+                <p>Play Fortnite here! (simulation)</p>
+                <button class="back" onclick="goHome()">⬅ Home</button>
+            </div>
+
+            <!-- Safari App -->
+            <div id="safari" class="app hidden">
+                <h2>🌐 Safari</h2>
+                <input type="text" id="urlInput" placeholder="Enter a website URL">
+                <button onclick="visitWebsite()">Go</button>
+                <p id="websiteMessage"></p>
+                <button class="back" onclick="goHome()">⬅ Home</button>
+            </div>
+
+            <!-- Camera App -->
+            <div id="camera" class="app hidden">
+                <h2>📷 Camera</h2>
+                <button onclick="takePhoto()">📸 Take Photo</button>
+                <p id="cameraMessage">No photo taken yet.</p>
+                <button class="back" onclick="goHome()">⬅ Home</button>
+            </div>
+
+            <!-- App Store -->
+            <div id="appstore" class="app hidden">
+                <h2>🛒 App Store</h2>
+                <p>Get more apps for free!</p>
+                <button onclick="installApp('Calculator')">Install Calculator</button>
+                <button onclick="installApp('Weather')">Install Weather</button>
+                <p id="storeMessage"></p>
+                <button class="back" onclick="goHome()">⬅ Home</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
